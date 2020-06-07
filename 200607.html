@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scal=1.0">
+  <title>javscript</title>
+  <style>
+    #result{
+      color:red;
+      font-size:2em;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>구구단 출력</h2>
+  <hr>
+  <script type="text/javascript">
+
+  for(var j=2; j<=9; j++){ //초기값 중간값 증가값
+    for(var i=1; i<9; i++){
+      document.write(j+"X"+i+"="+j*i+"<br>");
+    }
+    
+   
+  }
+
+  // for(var i=1; i<10; i++){
+  //   document.write(i+"<br>");
+  // } //1부터 증가
+  // for(var i=10; i>1; i--){
+  //   document.write(i+"<br>"); //10부터 감소 
+  // }
+
+//   var i =1, j=1;
+//   while(i>3){
+//     //변수 i의 초깃값은 1이기 때문에 이 while 문은 한 번도 실행되지 않음.
+//     document.write("i :"+(i++)+"<br>");
+//   }
+//   do {//변수 j의 초깃값은 1이기 때문에 이 do /while 문은 단 한 번만 실행됨.
+//   document.write("j:"+(j++)+"<br>");
+// }while(j>3);
+  // var i =1;
+
+  //   while(i<=10){
+  //     //변수 i가 10보다 작을 때만 while 문을 반복함.
+      
+  //     document.write(i+"<br>");
+  //     i++;
+  //      //반복할 때마다 변수 i를 1씩 증가시켜 변수 i가 10보다 커지면 반복문을 종료함.
+  //   }
+
+  // var d = new Date();
+  // d.setFullYear(2020);
+  // document.write(d+"년");
+
+  //getDay () 메소드는 지정된 날짜의 요일(0-6)을 리턴합니다.
+  //일요일은 0, 월요일은 1
+
+
+  // var date= new Date();
+  // var a =date.getFullYear();
+  // var b=date.getMonth()+1;
+  // var c=date.getSeconds();
+  // var d=date.setFullYear(2020);
+  // document.write(d+"년");
+
+
+  // document.write(a+"년"+b+"월"+d+"일");
+  
+  // var hour=date.getHours();
+  // if(hour<11){
+  //   alert('아침식사 시간입니다.');
+  // }
+  // else if (hour <15){
+  //   alert('점심식사 시간입니다.');
+  // }
+  // else{
+  //   alert('저녁식사 시간입니다.');
+  // }
+  // document.write(date);
+  </script>
+
+  <!-- <p id="result"></p> -->
+    <!-- <script type="text/javascript">
+
+
+    // var x =10, y =20;
+    // if(x==y){
+    //   documnet.write("x와 y는 같습니다.");
+    // }
+    // if(x<y){
+    //   document.write("x가 y보다 작습니다.");
+    // }
+    // if(x>y)//실행될 실행문이 한 줄뿐이라면 대괄호({})를 생략할 수 있음.
+    // document.write("x가 y보다 큽니다.");
+
+    // var x=3, y=5;
+    // var result = (x>y)? x:y //x가 더 크면 x를, 그렇지 않으면 y를 반환함.
+    
+    // if(x>y){
+    //   document.write("맞습니다.");
+    // }else{
+    //   document.write("아니예요.");
+    // }
+
+    // document.write("둘 중에 더 큰 수는"+result + "입니다.");
+
+    // var x =10, y=20;
+    // document.write((x && y)+"<br>"); //flase
+    // document.write((x || y)+"<br>"); //true
+    // document.write(!x); //무조건 부정
+
+
+    // var x=3, y='3', z=3;
+    // document.write((x==y)+"<br>"); //x와 y의 타입이 서로 다르므로 동등 연산자는 타입을 서로 같게 한 후 비교를 하게 됨. true
+    // document.write((x===y)+"<br>"); //x와 y의 타입이 서로 다르므로 false
+    // document.wirte(x===z); //x와 z는 값과 타입이 모두 같으므로 ture
+
+    // var x = 3, y=5;
+    // var a ="abc", b="bcd";
+    // document.write((x>y)+"<br>"); //y의 값이 x의 값보다 크므로 false
+    // document.write((a<=b)+"<br>"); //알파벳 순서상 'a'가 'b'보다 먼저 나오므로 'a'가 'b'보다 작음.
+    // document.write(x<a); //x의 값은 숫자이고 a의 값은 문자열이므로 비교할 수 없음.
+
+    // var x=10, y=10;
+    // document.write((++x-3)+"<br>"); //x와 값을 우선 1증가시킨 후에 3을 뺌. ++를 앞에다 쓰면 11을 앞에다 두고 -3을 뺀다
+    // document.write(x+"<br>"); //11
+    // document.write((y++ - 3)+"<br>"); //먼저 y에서 3을 뺀 후에 y의 값을 1 증가시킨. ++를 뒤에다 쓰면 -3을 빼고 ++ 뒤에 쓴 값을 증가 시킨다.
+    // document.write(y);
+
+    // var x =10; y=10; z=10;
+    // x=x-5;
+    // document.write(x+"<br>");
+    // y-=5; //y=y-5 와 같은 표현임.
+    // document.write(y+"<br>");
+    // z=-5; //z=-5와 같은 표현임.
+    // document.write(z);
+
+    // var x =10, y =4;
+    // document.write(x+y+"<br>");
+    // document.write(x-y+"<br>");
+    // document.write(x*y+"<br>");
+    // document.write(x/y+"<br>");
+    // document.write(x%y+"<br>"); //산술연산자 표기방법
+
+    // var dog={name: "해피", age:3}; //객체의 생성
+    // //객체의 프로퍼티 참조
+    // dcoument.getElementById("result").innerHTML = "강아지의 이름은"+dog.name+"이고, 나이는" +dog.age+"살 입니다.";
+
+    // var sym =Symbol("javascript"); //심볼 타입
+    // var symObj = Object(sym);
+    // document.getElementById("result").innerHTML=(typeof sym)+"<br>"+(typeof symObj);
+    // </script> -->
+
+  
+
+  <!-- <p id="result"></p>
+  <p class="result"></p>
+  <script type="text/javascript">
+    var a = prompt();
+    var b = prompt();
+    var z = a + b; -->
+
+    <!-- <p id="number"></p>
+    <script type="text/javascript">
+
+    // var name="홍길동";
+    // var age=20;
+    // var last="살 입니다." -->
+
+    <!-- // document.write(name+age+last);
+
+    // var firstNum = 10;
+    // var seconNum = 10.00;
+    // var thirdNum = 10e6;
+    // var fourthNum = 10e-6;
+    // document.getElementById("number").innerHTML=
+    // firstNum+"<br>"+seconNum+"<br>"+thirdNum+"<br>"+fourthNum+"<br>"; -->
+    <!-- </script> -->
+
+
+    <!-- // document.getElementById('result').innerHTML=z;
+
+    // document.getElementById("result").innerHTML=z; 내가 지정한 자리에 출력
+    // document.getElementByClassName('result').innerHTML=z; 
+    //document.write(z); 직접적인 문서에 바로 출력
+    // alert(z); 경고창에 출력
+    // prompt 명령어를 입력받는 창 -->
+
+  <!-- </script> -->
+</body>
+
+</html>
