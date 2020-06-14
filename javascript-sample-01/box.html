@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box1</title>
+    <style>
+        .border{
+            border:1px solid red;
+        }
+
+        .helloworld{
+            border-radius:5px;
+            border:5px solid silver;
+            display:inline-block;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>.off() 메소드</h1>
+    <button id="clickBtn">마우스를 클릭해</button>
+    <button id="removeBtn">제거</button>
+    <p id="text"></p> -->
+
+    <!-- off 메소드 -->
+    <div>
+        <!-- <button id="test" onclick="alert('clicking');">click me</button> -->
+        <button id="test">click</button>
+    </div>
+    <hr>
+    <h1>이벤트의 위임</h1>
+    <p>아래 버튼을 눌러 링크를 추가하고,링크를 클릭해</p>
+    <ul>
+        <li><a href="/html/intro">HTML</a></li>
+        <li><a href="/css/intro">CSS</a></li>
+    </ul>
+    <button>리스트 아이템 추가</button>
+    <p id="text"></p>
+
+    <!-- =================================== -->
+
+    <button type="button" onclick="helloWorld();">계속눌러봐!</button>
+
+    <div class="helloworld"></div>
+ 
+<script src="js/jquery-3.2.1.min.js"></script>
+
+<script>
+    $(function(){
+        $("#clickBtn").on("click",function(){
+            //id가 clickBtn 인 요소를 클릭했을 때 실행됨.
+            $("#text").append("버튼을 클릭함<br>");
+        });
+        $("#removeBtn").on("click",function(){
+            $("#clickBtn").off("click");
+            //id가 clickBtn 인 요소의 클릭이벤트와의 연결을 제거함.
+        });
+    });
+    off
+
+    $(function(){
+        $('#test').on('click',function(){
+            //클릭시 경고창을 출력하는 이벤트 등록
+            alert('clicking');
+        });
+    });
+
+    $(function(){
+        $("ul a").on("click",function(event){
+            // ul요소의 자식 요소 중 모든 a요소를 클릭했을때, 
+            event.preventDefault();
+            //a요소의 클릭시 기본 동작인 링크의 작동을 중지시킴.
+            $("#text").append("이 링크는 동작하지 않습니다!<br>");
+        });
+    });
+
+    // function helloWorld(){
+    // $("button").addClass('border');
+    // } //border 넣기. 
+
+    function helloWorld(){
+        $('.helloworld').toggleClass('border');
+            }
+</script>
+</body>
+</html>

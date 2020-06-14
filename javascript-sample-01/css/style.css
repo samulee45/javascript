@@ -1,0 +1,54 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+li{
+    list-style: none;
+}
+/* float 방식 */
+/* .navi>li{
+    float:left;
+    margin:30px 10px;
+}
+.navi{
+    background-color: khaki;
+    height:80px;
+}
+.subNav{
+    background-color: lightcoral;
+    display: none;
+    position: absolute;
+}
+.subNav>li{
+    margin:10px 0;
+    text-align:center;
+} */
+
+/* flex방식 */
+
+header{
+    width:1200px;
+    margin:0 auto;
+    background-color: lightgoldenrodyellow;
+}
+.navi{
+    display: flex;
+    justify-content: space-between;
+    padding:20px 20px;
+    position: relative;
+    
+}
+.subNav>li{
+    margin: 10px 10px;
+}
+.subNav{
+    position: absolute;
+    margin:20px 0;
+    display: none;
+    width:100px;
+    background-color: lightsalmon;
+}
