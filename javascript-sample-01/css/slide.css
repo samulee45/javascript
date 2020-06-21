@@ -1,0 +1,14 @@
+*{margin:0; padding:0;}
+a{text-decoration: none; color:inherit;}
+li{list-style:none;}
+#all{width:1350px; margin:0 atuo;}
+.slider>ul>li>a>img{
+    display:block;
+    transition:1s;
+}
+#slider-warp{
+    width:1350px;
+    height:900px;
+    overflow: hidden;
+}
+.slider>ul{display:flex;}

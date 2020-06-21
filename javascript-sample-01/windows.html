@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        .jbTitle{
+            text-align:center;
+        }
+        .jbMenu{
+            text-align: center;
+            background-color:bisque;
+            padding:10px 0px;
+            width:100%;
+        }
+        .jbContent{
+            height:2000px;
+        }
+        .jbFixed{
+            position:fixed;
+            top:0px;
+        }
+        .inner{
+            top:0;
+            width:100%;
+            min-width:1000px;
+            margin:0 auto;
+            background-color:white;
+            padding:0 10px;
+            height:45px;
+            box-sizing: border-box;
+        }
+        .fixinner{
+            position:fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="inner"></div>
+    <div class="jbTitle">
+        <h1>Site Title</h1>
+    </div>
+    <div class="jbMenu">
+        <a href="#">
+        <p>
+            First Menu
+            Second Menu
+            Third Menu
+            Fourth Menu
+        </p></a>
+    </div>
+    <div class="jbContent"></div>
+
+     <!-- <button onclick="alertFunc();"></button> -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- <p>setTimeout()을 이용한 예제</p>
+    <p>이미지를 클릭하면 2초뒤에 다음 이미지로 바뀌게 됩니다.</p>
+    <a href="javascript:image_onclick()" onfocus=this.blur()><image name=banner src="images/1.jpg"></a>
+    <button onclick="stop_banner();">정지</button> -->
+    <script>
+        // var myVar;
+
+        // function myFunction(){
+        //     myVar= setInterval(alertFunc, 3000);
+        // }
+        // function alertFunc(){
+        //     alert("hello");
+        // }
+        
+        // var timerID;
+        // var arrImage=new Array();
+        // arrImage[0]="images/1.jpg";
+        // arrImage[1]="images/2.jpg";
+        // arrImage[2]="images/3.jpg";
+
+        // function image_onclick(){
+        //     timerID=setTimeout("change_image()",2000);
+        //     alert("배너를 시작합니다.");
+        // }
+
+        // function change_image(){
+        //     var newImageNum=Math.round(Math.random()*2);
+        //     while(true){
+        //         if(document.banner.src.indexOf(arrImage[newImageNum])>=0){
+        //             newImageNum=Math.round(Math.random()*2);
+        //         }else{
+        //             document.banner.src=arrImage[newImageNum];
+        //             break;
+        //         }
+        //     }
+        //     timerID=setTimeout("change_image()",2000);  //클릭한 다음에 행동하게 하는 것.
+        // }
+        // function stop_banner(){
+        //     alert("방금 정지한 타이머의 ID는 "+timerID+"입니다.");
+        //     clearTimeout(timerID);
+        // }
+
+        $(function(){
+            var jbOffset=$('.jbMenu').offset();
+            $(window).scroll(function(){
+                if($(document).scrollTop()>jbOffset.top){ //jbOffset.top 말고 숫자로 할 수도 있음. ex.300
+                    $('.jbMenu').addClass('jbFixed');
+                }
+                else{
+                    $('.jbMenu').removeClass('jbFixed');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
