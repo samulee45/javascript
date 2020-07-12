@@ -72,6 +72,35 @@ img{width:100%;}
 .section03{padding:50px 0; background-color:#f6f3f2;}
 .secition04{padding: 50px 0;}
 .section05{padding:50px 0;}
+.modal-img{
+    padding:5% 0;
+}
 .section06{padding:50px 0;}
 
 .section07{padding:50px 0; background-color:#f6f3f2;}
+
+.tabp>img{
+    width:80%;
+}
+
+.tabp{
+    padding:5% 0;
+}
+
+.tab-btn>button{
+    width:80%;
+    border:none;
+    font-size:2em;
+}
+
+.btn-content{
+    display:none;
+    border:1px solid #000;
+    width:80%;
+    margin:0 auto;
+    height:200px;
+    display:none;
+    text-align:center;
+    box-sizing:border-box;
+    overflow-y:auto;
+}

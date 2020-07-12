@@ -63,7 +63,13 @@ var images=["k7_8.jpeg","k7_9.jpeg","k7_10.jpeg"];
                 $(".tab06-content").css("display","none");
             });
         });
+        $(function(){
+            $('#btn').click(function(){
+                $('.btn-content').slideToggle();
+            });
+        });
 
         // swiper
 
         var swiper = new Swiper('.swiper-container');
+
