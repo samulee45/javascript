@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slide.css">
+</head>
+<body>
+    <div id="all">
+        <div id="slider-warp">
+        <div class="slider">
+            <ul>
+                <li><a href="#"><img src="images/1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/3.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <!-- slider -->
+        </div>
+        <!-- slider-warp  -->
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        // setInterval(function(){
+        //     $('.slider').delay("1500");
+        //     $('.slider').animate({marginTop:"-900px"},500);
+        //     $('.slider').delay("1500");
+        //     $('.slider').animate({marginTop:"-1800px"},500);
+        //     $('.slider').delay("1500");
+        //     $('.slider').animate({marginTop:"0px"},500);
+        // }); //위로 움직이는 방법.
+
+        setInterval(function(){
+            $('.slider').delay("1500");
+            $('.slider').animate({marginLeft:"-1350px"},500);
+            $('.slider').delay("1500");
+            $('.slider').animate({marginLeft:"-2700px"},500);
+            $('.slider').delay("1500");
+            $('.slider').animate({marginLeft:"0px"},500);
+         });
+
+    </script>
+
+</body>
+</html>

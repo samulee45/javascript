@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test-tap</title>
+    <style type="text/css">
+        *{margin:0; padding:0;}
+        li{list-style:none;}
+        a{color:inherit; text-decoration: none;}
+
+        .warp-tab{
+            width:50%;
+            margin: 0 auto;
+
+        }
+
+        .warp-list>ul{
+            display:flex;
+        }
+        .warp-list>ul>li{
+            width:50%;
+            height:50px;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+        }
+        .warp-list>ul>li:first-child{
+            background-color:beige;
+        }
+        .warp-list>ul>li:last-child{
+            background-color:brown;
+        }
+
+        .tab-content-02{
+            display:none;
+        }
+
+        #background-changer{
+            position:absolute;
+            top:0;
+            width:100%;
+            height:900px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>TAB</h1>
+
+    <div class="warp-tab">
+        <div class="warp-list">
+        <ul>
+            <li class="tab-btn01"><a href="#">공지사항</a></li>
+            <li class="tab-btn02"><a href="#">게시판</a></li>
+        </ul>
+    </div>
+    <div class="warp-content">
+        <div class="tab-content-01">
+            <p>2020-07-05 공지사항표시입니다.</p>
+            <p>2020-07-03 게시판 리스트입니다.</p>
+        </div>
+        <div class="tab-content-02">
+            <p>2020-07-02 공지사항표시입니다.</p>
+            <p>2020-07-01 게시판 리스트입니다.</p>
+        </div>
+     </div>
+    </div> -->
+    <div id="background-changer">
+
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        // $(function(){
+        //     $(".tab-btn01").click(function(){
+        //         $(".tab-content-01").css("display","block");
+        //         $(".tab-content-02").css("display","none");
+        //     });
+        //     $(".tab-btn02").click(function(){
+        //         $(".tab-content-02").css("display","block");
+        //         $(".tab-content-01").css("display","none");
+        //     });
+        // });
+
+        var images=["k7_8.jpeg","k7_9.jpeg","k7_10.jpeg"];
+        $(function(){
+            var i=0;
+            $('#background-changer').css('background-image',"url(images/"+images[i]+")");
+            setInterval(function(){
+                i++; if(i==images.length){
+                    i=0;
+                }
+                $("#background-changer").fadeOut("slow",function(){
+                    $(this).css("background-image","url(images/"+images[i]+")");
+                    $(this).fadeIn("slow");
+                });
+            },3000);
+        });
+    </script>
+</body>
+</html>

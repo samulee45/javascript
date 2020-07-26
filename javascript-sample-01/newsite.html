@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newsite</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/newcss.css">
+
+</head>
+<body>
+    <div class="all">
+        <header>
+            <div id="logo">
+                <a href="newsite.html">LOGO</a>
+            </div>
+            <nav>
+                <ul class="navi-box">
+                    <li><a href="#">홈</a>
+                        <ul class="sub-nav">
+                            <li><a href="#">subtext1</a></li>
+                            <li><a href="#">subtext2</a></li>
+                            <li><a href="#">subtext3</a></li>
+                            <li><a href="#">subtext4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소개</a>
+                        <ul class="sub-nav">
+                            <li><a href="#">subtext1</a></li>
+                            <li><a href="#">subtext2</a></li>
+                            <li><a href="#">subtext3</a></li>
+                            <li><a href="#">subtext4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">서비스</a>
+                        <ul class="sub-nav">
+                            <li><a href="#">subtext1</a></li>
+                            <li><a href="#">subtext2</a></li>
+                            <li><a href="#">subtext3</a></li>
+                            <li><a href="#">subtext4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객센터</a>
+                        <ul class="sub-nav">
+                            <li><a href="#">subtext1</a></li>
+                            <li><a href="#">subtext2</a></li>
+                            <li><a href="#">subtext3</a></li>
+                            <li><a href="#">subtext4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">기타</a>
+                        <ul class="sub-nav">
+                            <li><a href="#">subtext1</a></li>
+                            <li><a href="#">subtext2</a></li>
+                            <li><a href="#">subtext3</a></li>
+                            <li><a href="#">subtext4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <div class="slider">
+                <div class="slider-warp">
+                    <div class="slider-box">
+                    <ul class="slick">
+                        <li><img src="images/1.jpg" alt=""></li>
+                        <li><img src="images/2.jpg" alt=""></li>
+                        <li><img src="images/3.jpg" alt=""></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.navi-box').mouseover(function(){
+                $('.sub-nav').stop().slideDown();
+            });
+            $('.navi-box').mouseleave(function(){
+                $('.sub-nav').stop().slideUp();
+            });
+        });
+
+        // slick sldie
+
+        $(function(){
+            $('.slick').slick({
+                autoplay:true,
+                autoplaySpeed:2000
+            });
+        });
+        // setInterval(function(){
+        //     $('.slider-box').delay("2000");
+        //     $('.slider-box').animate({marginLeft:'-1350px'},500);
+        //     $('.slider-box').delay("2000");
+        //     $('.slider-box').animate({marginLeft:'-2750px'},500);
+        //     $('.slider-box').delay("2000");
+        //     $('.slider-box').animate({marginLeft:'0px'},500);
+        // });
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>masonry</title>
+    <link rel="stylesheet" href="css/0712_7.css">
+</head>
+<body>
+    <div class="all-wrap">
+        <div class="sub_wrap">
+            <img src="images/cat1.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/cat2.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/cat3.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/cat14.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/cat5.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/cat6.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/cat7.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/cat8.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/cat9.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/cat10.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/cat11.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/cat12.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/cat13.jpg" alt="">
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    
+    <script>
+        $(function(){
+        $('.all-wrap').masonry({
+            //options...
+            itemSelector:'.sub_wrap',
+            fitwidth:true,
+            columnWidth:400
+        });
+        });
+    </script>
+</body>
+</html>
