@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>webdesign</title>
+    <link rel="stylesheet" href="css/0726_1.css">
+</head>
+<body>
+    <div id="index_box">
+        <!-- 왼쪽메뉴 -->
+        <div id="index_left">
+            <header>
+                <!-- 로고 -->
+                <div class="logo_box"><a href="0726_1.html"><img src="images/logo.png" alt="로고"></a></div>
+                <!-- 메뉴 네비게이션 -->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">이용안내</a>
+                            <ul class="sub_menu">
+                                <li><a href="#">이용방법</a></li>
+                                <li><a href="#">이용시간</a></li>
+                                <li><a href="#">이용요금</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이벤트정보</a>
+                            <ul class="sub_menu">
+                                <li><a href="#">현장이벤트</a></li>
+                                <li><a href="#">온라인이벤트</a></li>
+                                <li><a href="#">이벤트예약</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">프로그램</a>
+                            <ul class="sub_menu">
+                                <li><a href="#">프로그램안내</a></li>
+                                <li><a href="#">온라인예약</a></li>
+                                <li><a href="#">단체예약상담</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">고객센터</a>
+                            <ul class="sub_menu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주묻는질문</a></li>
+                                <li><a href="#">자료실</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+        <!-- 왼쪽메뉴 끝 -->
+        <div id="index_right">
+            <!-- 이미지 슬라이드 시작 -->
+            <section>
+                <div id="slide_box">
+                    <ul>
+                        <li><a href="#"><img src="images/slide1.jpg" alt="슬라이드1"></a></li>
+                        <li><a href="#"><img src="images/slide2.jpg" alt="슬라이드2"></a></li>
+                        <li><a href="#"><img src="images/slide3.jpg" alt="슬라이드3"></a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div id="contents_box">
+                    <!-- 탭메뉴 시작 -->
+                    <div class="tab_menu">
+                        <ul class="tab_button">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">갤러리</a></li>
+                        </ul>
+                        <div class="content">
+                            <div class="tab1">
+                                <ul>
+                                    <li><a href="#" class="팝업버튼">여기를 누르면 팝업이 나옵니다.</a><span>20-03-24</span></li>
+                                    <li><a href="#">빛축제 후원 기업 모집</a><span>20-03-21</span></li>
+                                    <li><a href="#">코로나19 전염 방지 자체 소독 실시</a><span>20-03-06</span></li>
+                                    <li><a href="#">2020 해운대빛축제 개최 안내</a><span>20-03-15</span></li>
+                                </ul>
+                            </div>
+                            <div class="tab2">
+                                <ul>
+                                    <li><a href="#"><img src="images/gallery1.jpg" alt="갤러리1"></a></li>
+                                    <li><a href="#"><img src="images/gallery2.jpg" alt="갤러리2"></a></li>
+                                    <li><a href="#"><img src="images/gallery3.jpg" alt="갤러리3"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 탭메뉴 끝 -->
+                    <!-- 배너시작 -->
+                    <div class="banner"><a href="#"><img src="images/banner.jpg" alt="배너"></a></div>
+                    <!-- 배너 끝 -->
+                    <!-- 바로가기시작 -->
+                    <div class="banner"><a href="#"><img src="images/direct.jpg" alt="바로가기"></a></div>
+                    <!-- 바로가기끝 -->
+                </div>
+                <div id="popup">
+                    <div class="popup_title"><a href="#">공지사항</a></div>
+                    <div class="popup_text">코로나19바이러스의 확산 방지를 위하여<br>부득이하게 해운대빛축제 개장일이<br>연장되었음을 안내드립니다.<br> 변경 전 : 2020년 3월 23일<br> 변경 후 : 2020년 5월 4일<br> 관람객 여러분의 많은 양해 부탁드립니다.<br></div>
+                    <div class="popup_bottom"><input type="button" class="팝업닫기" value="닫기"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $('.menu>ul>li').hover(function(){
+            $(this).children('.sub_menu').stop().slideToggle();
+        });
+    }); 
+    // 왼쪽 메뉴 
+
+    // 이미지
+    // gt()인덱스 번호로 요소를 찾기
+    $('#slide_box>ul>li:gt(0)').hide();
+    setInterval(function(){
+        $('#slide_box>ul>li:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('#slide_box>ul');
+    },3000);
+
+     //팝업
+     $('.팝업버튼').click(function(){
+            $('#popup').show();
+        });
+        $('.팝업닫기').click(function(){
+            $('#popup').hide();
+        });
+
+    // 탭메뉴
+    $('.content').children().hide();
+    $('.tab1').fadeIn();
+    $('.tab_button>li:first').css('background','white');
+    //모든탭메뉴 내용숨기고 공지사항 버튼만 색상변경
+    $('.tab_button>li:last').click(function(){
+        $('.tab_button>li:first').css('background','darkgrey');
+        $(this).css('background','white');
+        $('.tab1').hide();
+        $('.tab2').fadeIn();
+    }); //두번째 탭버튼 눌렀을 때
+    $('.tab_button>li:first').click(function(){
+    $('.tab_button>li:last').css('background','darkgrey');
+    $(this).css('background','white');
+    $('.tab2').hide();
+    $('.tab1').fadeIn();
+    });
+    
+    </script>
+</body>
+</html>
